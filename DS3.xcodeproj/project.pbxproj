@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E25DC3A6261B77D7008112D9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DC3A5261B77D7008112D9 /* Skill.swift */; };
 		E295A153261B30BB00FA2C07 /* DS3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A152261B30BB00FA2C07 /* DS3App.swift */; };
 		E295A155261B30BB00FA2C07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A154261B30BB00FA2C07 /* ContentView.swift */; };
 		E295A157261B30C000FA2C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E295A156261B30C000FA2C07 /* Assets.xcassets */; };
 		E295A15A261B30C000FA2C07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E295A159261B30C000FA2C07 /* Preview Assets.xcassets */; };
 		E295A165261B30C000FA2C07 /* DS3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A164261B30C000FA2C07 /* DS3Tests.swift */; };
 		E295A170261B30C000FA2C07 /* DS3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A16F261B30C000FA2C07 /* DS3UITests.swift */; };
+		E295A182261B31EE00FA2C07 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A181261B31EE00FA2C07 /* Item.swift */; };
+		E295A18A261B323C00FA2C07 /* Equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A189261B323C00FA2C07 /* Equipment.swift */; };
+		E295A18F261B342300FA2C07 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A18E261B342300FA2C07 /* Weapon.swift */; };
+		E295A198261B4A5100FA2C07 /* WeaponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E25DC3A5261B77D7008112D9 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		E295A14F261B30BB00FA2C07 /* DS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E295A152261B30BB00FA2C07 /* DS3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS3App.swift; sourceTree = "<group>"; };
 		E295A154261B30BB00FA2C07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +51,10 @@
 		E295A16B261B30C000FA2C07 /* DS3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DS3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E295A16F261B30C000FA2C07 /* DS3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS3UITests.swift; sourceTree = "<group>"; };
 		E295A171261B30C000FA2C07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E295A181261B31EE00FA2C07 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E295A189261B323C00FA2C07 /* Equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equipment.swift; sourceTree = "<group>"; };
+		E295A18E261B342300FA2C07 /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
+		E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,9 @@
 		E295A151261B30BB00FA2C07 /* DS3 */ = {
 			isa = PBXGroup;
 			children = (
+				E295A193261B4A0D00FA2C07 /* Views */,
+				E295A180261B317500FA2C07 /* Models */,
 				E295A152261B30BB00FA2C07 /* DS3App.swift */,
-				E295A154261B30BB00FA2C07 /* ContentView.swift */,
 				E295A156261B30C000FA2C07 /* Assets.xcassets */,
 				E295A15B261B30C000FA2C07 /* Info.plist */,
 				E295A158261B30C000FA2C07 /* Preview Content */,
@@ -128,6 +139,26 @@
 				E295A171261B30C000FA2C07 /* Info.plist */,
 			);
 			path = DS3UITests;
+			sourceTree = "<group>";
+		};
+		E295A180261B317500FA2C07 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E295A181261B31EE00FA2C07 /* Item.swift */,
+				E295A189261B323C00FA2C07 /* Equipment.swift */,
+				E295A18E261B342300FA2C07 /* Weapon.swift */,
+				E25DC3A5261B77D7008112D9 /* Skill.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E295A193261B4A0D00FA2C07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E295A154261B30BB00FA2C07 /* ContentView.swift */,
+				E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +290,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E25DC3A6261B77D7008112D9 /* Skill.swift in Sources */,
+				E295A18F261B342300FA2C07 /* Weapon.swift in Sources */,
 				E295A155261B30BB00FA2C07 /* ContentView.swift in Sources */,
+				E295A182261B31EE00FA2C07 /* Item.swift in Sources */,
+				E295A198261B4A5100FA2C07 /* WeaponDetailView.swift in Sources */,
+				E295A18A261B323C00FA2C07 /* Equipment.swift in Sources */,
 				E295A153261B30BB00FA2C07 /* DS3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

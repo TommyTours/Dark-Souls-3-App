@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Wpn_Fume_Ultra_Greatsword-2.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Wpn_Fume_Ultra_Greatsword-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Wpn_Fume_Ultra_Greatsword.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
