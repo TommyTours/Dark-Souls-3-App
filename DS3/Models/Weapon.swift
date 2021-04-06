@@ -27,9 +27,8 @@ final class Weapon : Equipment
     let DmgType: [String]
     let Ability: Skill
     let FPCost: Int
-    let ImageKey: String
     
-    init(name: String, description: String, location: String, weight: Float, durability: Int, physAtk: Int, magAtk: Int, fireAtk: Int, lightningAtk: Int, darkAtk: Int, critical: Int, physDef: Int, magDef: Int, fireDef: Int, lightningDef: Int, darkDef: Int, stability: Int, bleed: Int, poison: Int, frost: Int, dmgType: [String], ability: Skill, fpCost: Int, imagekey: String)
+    init(name: String, description: String, location: String, weight: Float, durability: Int, imageKey: String, physAtk: Int, magAtk: Int, fireAtk: Int, lightningAtk: Int, darkAtk: Int, critical: Int, physDef: Int, magDef: Int, fireDef: Int, lightningDef: Int, darkDef: Int, stability: Int, bleed: Int, poison: Int, frost: Int, dmgType: [String], ability: Skill, fpCost: Int)
     {
         self.PhysAtk = physAtk
         self.MagAtk = magAtk
@@ -49,8 +48,7 @@ final class Weapon : Equipment
         self.DmgType = dmgType
         self.Ability = ability
         self.FPCost = fpCost
-        self.ImageKey = imagekey
-        super.init(name: name, description: description, location: location, weight: weight, durability: durability)
+        super.init(name: name, description: description, location: location, weight: weight, durability: durability, imageKey: imageKey)
     }
     
     required init(from decoder: Decoder) throws
@@ -74,8 +72,8 @@ final class Weapon : Equipment
         self.DmgType = try container.decode([String].self, forKey: .DmgType)
         self.Ability = try container.decode(Skill.self, forKey: .Ability)
         self.FPCost = try container.decode(Int.self, forKey: .FPCost)
-        self.ImageKey = try container.decode(String.self, forKey: .ImageKey)
-        try super.init(from: decoder)
+        let superDecoder = try container.superDecoder(forKey: .Equipment)
+        try super.init(from: superDecoder)
     }
     
     private enum CodingKeys: String, CodingKey
@@ -98,12 +96,40 @@ final class Weapon : Equipment
         case DmgType
         case Ability
         case FPCost
-        case ImageKey
+        case Equipment
     }
+    
+    // Method used to encode class to JSON
+    override public func encode(to encoder: Encoder) throws
+    {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(PhysAtk, forKey: .PhysAtk)
+        try container.encode(MagAtk, forKey: .MagAtk)
+        try container.encode(FireAtk, forKey: .FireAtk)
+        try container.encode(LightningAtk, forKey: .LightningAtk)
+        try container.encode(DarkAtk, forKey: .DarkAtk)
+        try container.encode(Critical, forKey: .Critical)
+        try container.encode(PhysDef, forKey: .PhysDef)
+        try container.encode(MagDef, forKey: .MagDef)
+        try container.encode(FireDef, forKey: .FireDef)
+        try container.encode(LightningDef, forKey: .LightningDef)
+        try container.encode(DarkDef, forKey: .DarkDef)
+        try container.encode(Stability, forKey: .Stability)
+        try container.encode(Bleed, forKey: .Bleed)
+        try container.encode(Poison, forKey: .Poison)
+        try container.encode(Frost, forKey: .Frost)
+        try container.encode(DmgType, forKey: .DmgType)
+        try container.encode(Ability, forKey: .Ability)
+        try container.encode(FPCost, forKey: .FPCost)
+        let superEncoder = container.superEncoder(forKey: .Equipment)
+        try super.encode(to: superEncoder)
+    }
+    
     
     func encode() -> String
     {
         let encoder = JSONEncoder()
+        
         encoder.outputFormatting = .prettyPrinted
         
         let data = try! encoder.encode(self)
