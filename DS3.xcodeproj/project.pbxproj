@@ -21,6 +21,9 @@
 		E295A198261B4A5100FA2C07 /* WeaponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */; };
 		E2AAC8DC261C86980000404D /* EquipmentRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAC8DB261C86980000404D /* EquipmentRow.swift */; };
 		E2AAC8E1261C8D770000404D /* WeaponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AAC8E0261C8D770000404D /* WeaponList.swift */; };
+		E2E138792621ECAC00D3AE08 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E138782621ECAC00D3AE08 /* Character.swift */; };
+		E2E1387E2621ED9700D3AE08 /* Armour.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1387D2621ED9700D3AE08 /* Armour.swift */; };
+		E2E138832621EE8200D3AE08 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E138822621EE8200D3AE08 /* CharacterDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailView.swift; sourceTree = "<group>"; };
 		E2AAC8DB261C86980000404D /* EquipmentRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentRow.swift; sourceTree = "<group>"; };
 		E2AAC8E0261C8D770000404D /* WeaponList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponList.swift; sourceTree = "<group>"; };
+		E2E138782621ECAC00D3AE08 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E2E1387D2621ED9700D3AE08 /* Armour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Armour.swift; sourceTree = "<group>"; };
+		E2E138822621EE8200D3AE08 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,8 @@
 				E295A18E261B342300FA2C07 /* Weapon.swift */,
 				E25DC3A5261B77D7008112D9 /* Skill.swift */,
 				E2AAC8E0261C8D770000404D /* WeaponList.swift */,
+				E2E138782621ECAC00D3AE08 /* Character.swift */,
+				E2E1387D2621ED9700D3AE08 /* Armour.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,6 +182,7 @@
 				E295A154261B30BB00FA2C07 /* ContentView.swift */,
 				E295A197261B4A5100FA2C07 /* WeaponDetailView.swift */,
 				E2AAC8DB261C86980000404D /* EquipmentRow.swift */,
+				E2E138822621EE8200D3AE08 /* CharacterDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -311,11 +320,14 @@
 				E25DC3A6261B77D7008112D9 /* Skill.swift in Sources */,
 				E295A18F261B342300FA2C07 /* Weapon.swift in Sources */,
 				E295A155261B30BB00FA2C07 /* ContentView.swift in Sources */,
+				E2E138832621EE8200D3AE08 /* CharacterDetailView.swift in Sources */,
 				E295A182261B31EE00FA2C07 /* Item.swift in Sources */,
 				E295A198261B4A5100FA2C07 /* WeaponDetailView.swift in Sources */,
 				E2AAC8DC261C86980000404D /* EquipmentRow.swift in Sources */,
 				E295A18A261B323C00FA2C07 /* Equipment.swift in Sources */,
+				E2E138792621ECAC00D3AE08 /* Character.swift in Sources */,
 				E295A153261B30BB00FA2C07 /* DS3App.swift in Sources */,
+				E2E1387E2621ED9700D3AE08 /* Armour.swift in Sources */,
 				E2AAC8E1261C8D770000404D /* WeaponList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

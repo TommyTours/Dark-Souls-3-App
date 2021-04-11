@@ -27,8 +27,16 @@ final class Weapon : Equipment
     let DmgType: [String]
     let Ability: Skill
     let FPCost: Int
+    let StrReq: Int
+    let StrScale: String  // TODO: Work out encoding/decoding of enums without explicit typing
+    let DexReq: Int
+    let DexScale: String  // TODO: Work out encoding/decoding of enums without explicit typing
+    let IntReq: Int
+    let IntScale: String  // TODO: Work out encoding/decoding of enums without explicit typing
+    let FthReq: Int
+    let FthScale: String  // TODO: Work out encoding/decoding of enums without explicit typing
     
-    init(name: String, description: String, location: String, weight: Float, durability: Int, imageKey: String, physAtk: Int, magAtk: Int, fireAtk: Int, lightningAtk: Int, darkAtk: Int, critical: Int, physDef: Int, magDef: Int, fireDef: Int, lightningDef: Int, darkDef: Int, stability: Int, bleed: Int, poison: Int, frost: Int, dmgType: [String], ability: Skill, fpCost: Int)
+    init(name: String, description: String, location: String, weight: Float, durability: Int, imageKey: String, physAtk: Int, magAtk: Int, fireAtk: Int, lightningAtk: Int, darkAtk: Int, critical: Int, physDef: Int, magDef: Int, fireDef: Int, lightningDef: Int, darkDef: Int, stability: Int, bleed: Int, poison: Int, frost: Int, dmgType: [String], ability: Skill, fpCost: Int, strReq: Int, strScale: String, dexReq: Int, dexScale: String, intReq: Int, intScale: String, fthReq: Int, fthScale: String)
     {
         self.PhysAtk = physAtk
         self.MagAtk = magAtk
@@ -48,6 +56,14 @@ final class Weapon : Equipment
         self.DmgType = dmgType
         self.Ability = ability
         self.FPCost = fpCost
+        self.StrReq = strReq
+        self.StrScale = strScale
+        self.DexReq = dexReq
+        self.DexScale = dexScale
+        self.IntReq = intReq
+        self.IntScale = intScale
+        self.FthReq = fthReq
+        self.FthScale = fthScale
         super.init(name: name, description: description, location: location, weight: weight, durability: durability, imageKey: imageKey)
     }
     
@@ -72,6 +88,15 @@ final class Weapon : Equipment
         self.DmgType = try container.decode([String].self, forKey: .DmgType)
         self.Ability = try container.decode(Skill.self, forKey: .Ability)
         self.FPCost = try container.decode(Int.self, forKey: .FPCost)
+        self.StrReq = try container.decode(Int.self, forKey: .StrReq)
+        self.StrScale = try container.decode(String.self, forKey: .StrScale)
+        self.DexReq = try container.decode(Int.self, forKey: .DexReq)
+        self.DexScale = try container.decode(String.self, forKey: .DexScale)
+        self.IntReq = try container.decode(Int.self, forKey: .IntReq)
+        self.IntScale = try container.decode(String.self, forKey: .IntScale)
+        self.FthReq = try container.decode(Int.self, forKey: .FthReq)
+        self.FthScale = try container.decode(String.self, forKey: .FthScale)
+        
         let superDecoder = try container.superDecoder(forKey: .Equipment)
         try super.init(from: superDecoder)
     }
@@ -97,6 +122,14 @@ final class Weapon : Equipment
         case Ability
         case FPCost
         case Equipment
+        case StrReq
+        case StrScale
+        case DexReq
+        case DexScale
+        case IntReq
+        case IntScale
+        case FthReq
+        case FthScale
     }
     
     // Method used to encode class to JSON
@@ -121,6 +154,14 @@ final class Weapon : Equipment
         try container.encode(DmgType, forKey: .DmgType)
         try container.encode(Ability, forKey: .Ability)
         try container.encode(FPCost, forKey: .FPCost)
+        try container.encode(StrReq, forKey: .StrReq)
+        try container.encode(StrScale, forKey: .StrScale)
+        try container.encode(DexReq, forKey: .DexReq)
+        try container.encode(DexScale, forKey: .DexScale)
+        try container.encode(IntReq, forKey: .IntReq)
+        try container.encode(IntScale, forKey: .IntScale)
+        try container.encode(FthReq, forKey: .FthReq)
+        try container.encode(FthScale, forKey: .FthScale)
         let superEncoder = container.superEncoder(forKey: .Equipment)
         try super.encode(to: superEncoder)
     }
@@ -147,5 +188,15 @@ extension Weapon {
         case Strike = "Strike"
         case Thrust = "Thrust"
         case Slash = "Slash"
+    }
+    
+    enum Scaling: String
+    {
+        case A = "A"
+        case B = "B"
+        case C = "C"
+        case D = "D"
+        case E = "E"
+        case none = "-"
     }
 }
