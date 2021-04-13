@@ -121,7 +121,6 @@ final class Weapon : Equipment
         case DmgType
         case Ability
         case FPCost
-        case Equipment
         case StrReq
         case StrScale
         case DexReq
@@ -130,6 +129,7 @@ final class Weapon : Equipment
         case IntScale
         case FthReq
         case FthScale
+        case Equipment
     }
     
     // Method used to encode class to JSON
@@ -165,7 +165,6 @@ final class Weapon : Equipment
         let superEncoder = container.superEncoder(forKey: .Equipment)
         try super.encode(to: superEncoder)
     }
-    
     
     func encode() -> String
     {

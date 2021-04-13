@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Wolf_Knight_Helm.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Wolf_Knight_Helm-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Wolf_Knight_Helm-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

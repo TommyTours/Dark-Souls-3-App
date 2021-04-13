@@ -14,7 +14,7 @@ struct WeaponDetailView: View
     {
         VStack
         {
-            NameImageView(weapon: weapon)
+            WeaponNameImageView(weapon: weapon)
                 .padding(.top)
             AtkDefView(weapon: weapon)
                 .padding(.bottom)
@@ -28,7 +28,7 @@ struct WeaponDetailView: View
     }
 }
 
-struct NameImageView: View
+struct WeaponNameImageView: View
 {
     let weapon: Weapon
     
@@ -42,20 +42,21 @@ struct NameImageView: View
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .bold()
                     .multilineTextAlignment(.leading)
-                HStack {
+                HStack
+                {
                     VStack(alignment: .leading)
                     {
                         
                         Text("Damage Type:")
                         Text("Ability:")
-                        Text("FP Cost:")
+                        Text("Durability")
                     }
                     Spacer()
                     VStack(alignment: .leading)
                     {
                         Text(printDmgType(weapon: weapon))
                         Text(weapon.Ability.name)
-                        Text(String(weapon.FPCost))
+                        Text(String(weapon.Durability))
                     }
                 }
             }
@@ -349,10 +350,11 @@ struct SkillDescriptionView: View
             {
                 VStack(alignment: .leading)
                 {
-                    Text("Skill")
+                    Text("Skill: \(weapon.Ability.name)")
                         .font(.title2)
                         .bold()
                     Text(weapon.Ability.description)
+                    Text("FP Cost: \(weapon.FPCost)")
                 }
                 .padding(.horizontal)
                 Spacer()
