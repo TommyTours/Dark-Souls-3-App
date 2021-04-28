@@ -6,6 +6,20 @@
          contextName = "closure #2 in ContentView.body.getter:ContentView.swift">
       </ContextState>
       <ContextState
+         contextName = "StepperView.decrementStep():CharacterCreationView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value">
+            </PersistentString>
+            <PersistentString
+               value = "level">
+            </PersistentString>
+            <PersistentString
+               value = "min">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Weapon.encode():Weapon.swift">
       </ContextState>
       <ContextState

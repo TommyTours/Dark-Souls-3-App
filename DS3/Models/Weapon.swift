@@ -7,8 +7,16 @@
 
 import Foundation
 
-final class Weapon : Equipment
+final class Weapon : Equipment, Hashable
 {
+    static func == (lhs: Weapon, rhs: Weapon) -> Bool {
+        lhs.Name == rhs.Name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(Name)
+    }
+    
     let PhysAtk: Int
     let MagAtk: Int
     let FireAtk: Int
@@ -203,7 +211,7 @@ extension Weapon {
         case None = "-"
     }
     
-    enum WeaponTypes: String
+    enum WeaponTypes: String, CaseIterable
     {
         case Dagger = "Dagger"
         case StraightSword = "Straight Sword"
@@ -228,7 +236,7 @@ extension Weapon {
         case Stave = "Stave"
         case Flame = "Flame"
         case Talisman = "Talisman"
-        case SacredChime = "SacredChime"
+        case SacredChime = "Sacred Chime"
         case Shield = "Shield"
     }
 }

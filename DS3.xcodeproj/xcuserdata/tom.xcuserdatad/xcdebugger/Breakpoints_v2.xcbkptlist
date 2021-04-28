@@ -36,5 +36,208 @@
             landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D607AE0C-59FA-47F5-BFFA-79255FD568D1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/CharacterCreationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "StatCounter"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0192329C-9704-4189-B7CB-6BA75CA3C353"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/CharacterCreationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "incrementStep()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "371F30E0-EECD-4A87-AD2B-DFEA83F82884"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/CharacterCreationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "decrementStep()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7359D96C-4466-4D5D-B50D-E009CE073AC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/CharacterCreationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "220"
+            endingLineNumber = "220"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/EquipmentRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "WeaponRows"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - a12a13c2be0fd5d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of DS3.WeaponRows.weaponList : DS3.WeaponList"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - 33351dbc86c43507"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.weaponList.getter : DS3.WeaponList"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "135">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - 9b45011653d33d0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.weaponList.setter : DS3.WeaponList"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "150">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - 123a91c813140704"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.weaponList.modify : DS3.WeaponList"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - d3577430f41e110b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.weaponList.modify : DS3.WeaponList with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "10">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - 38ec40266d7572fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.$weaponList.getter : SwiftUI.Binding&lt;DS3.WeaponList&gt;"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "163">
+               </Location>
+               <Location
+                  uuid = "BE4A617A-0290-4FF2-8DA0-39A04A6F7D9B - f7a9f788dca0e75b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.WeaponRows.init() -&gt; DS3.WeaponRows"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/EquipmentRow.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14DCDCF1-1D65-4F37-B678-1E264786B7B5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/EquipmentRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

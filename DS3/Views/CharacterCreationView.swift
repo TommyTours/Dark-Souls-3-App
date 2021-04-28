@@ -57,15 +57,19 @@ struct CharacterCreationView: View
                     }.onChange(of: selectedClass) {
                         value in
                         level = setBaseLevel(charClass: value)
-                        //attributes = DS3.Attributes(charClass: value)
                         setBaseAttributes(attributes: Character.ReturnBaseAttributeDict(charClass: value))
-                        //remainingPoints = 0
                     }
                 }
+                Section(header: Text("Attributes"))
+                {
                 AttributesView(vgr: $vgr, att: $att, end: $end, vit: $vit, str: $str, dex: $dex, intel: $intel, fth: $fth, luck: $luck, level: $level, baseAttributes: Character.ReturnBaseAttributeDict(charClass: selectedClass))
+                }
                 Button(action: {
-                        let newCharacter = Character(name: charName, charClass: selectedClass, rh1: nil, rh2: nil, rh3: nil, lh1: nil, lh2: nil, lh3: nil, head: nil, arms: nil, body: nil, legs: nil)}, label: { Text("Create Character")
-                            //CharacterList.add(newCharacter)
+                        let newCharacter = Character(name: charName, charClass: selectedClass, rh1: nil, rh2: nil, rh3: nil, lh1: nil, lh2: nil, lh3: nil, head: nil, arms: nil, body: nil, legs: nil)
+                            print(newCharacter)
+                    //CharacterList.add(newCharacter)
+                    
+                }, label: { Text("Create Character")
                         })
             }.navigationBarTitle(Text("New Character"))
         }
@@ -111,21 +115,7 @@ struct CharacterCreationView: View
     }
 }
 
-//struct StepperView: View
-//{
-//    @Binding var value: Int
-//    let label: String
-//    let step = 1
-//    let range = 1...99
-//
-//    var body: some View
-//    {
-//        Stepper(value: $value, in: range, step: step) {
-//            Text("\(label) \(value)").bold()
-//        }
-//    }
-//}
-
+/// Presently unused but may be used in another app
 struct StatCounter: View
 {
     @Binding var value: Int
@@ -227,50 +217,15 @@ struct CharacterCreationView_Previews: PreviewProvider {
     }
 }
 
-struct AttributesView: View {
-    @Binding var vgr: Int
-    @Binding var att: Int
-    @Binding var end: Int
-    @Binding var vit: Int
-    @Binding var str: Int
-    @Binding var dex: Int
-    @Binding var intel: Int
-    @Binding var fth: Int
-    @Binding var luck: Int
-    @Binding var level: Int
-    let baseAttributes: Dictionary<String, Int>
-    
-    var body: some View {
-        Section(header: Text("Attributes"))
-        {
-            //Stepper(value: $level, in: 1...802, label: { Text("Level: \(level)") } )
-            StepperView(value: $vgr, level: $level, label: "Vigor", min: baseAttributes["Vgr"]!)
-            StepperView(value: $att, level: $level, label: "Attunement", min: baseAttributes["Att"]!)
-            StepperView(value: $end, level: $level, label: "Endurance", min: baseAttributes["End"]!)
-            StepperView(value: $vit, level: $level, label: "Vitality", min: baseAttributes["Vit"]!)
-            StepperView(value: $str, level: $level, label: "Strength", min: baseAttributes["Str"]!)
-            StepperView(value: $dex, level: $level, label: "Dexterity", min: baseAttributes["Dex"]!)
-            StepperView(value: $intel, level: $level, label: "Intelligence", min: baseAttributes["Int"]!)
-            StepperView(value: $fth, level: $level, label: "Faith", min: baseAttributes["Fth"]!)
-            StepperView(value: $luck, level: $level, label: "Luck", min: baseAttributes["Luck"]!)
 
-        }
-    }
-}
 
 struct NameLevelView: View {
     @Binding var charName: String
     @Binding var level: Int
     var body: some View {
-        Section()
+        Section(header: Text("Character Name"))
         {
             TextField("Name", text: $charName)
-            HStack
-            {
-                Text("Level")
-                Spacer()
-                Text("\(level)")
-            }
         }
     }
 }

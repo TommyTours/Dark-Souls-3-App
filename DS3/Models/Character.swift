@@ -13,16 +13,16 @@ class Character: Codable
     @Published var CharClass: CharacterClass
     @Published var Level: Int
     var Attributes: Attributes
-    let RightHand1: Weapon?
-    let RightHand2: Weapon?
-    let RightHand3: Weapon?
-    let LeftHand1: Weapon?
-    let LeftHand2: Weapon?
-    let LeftHand3: Weapon?
-    let Head: Armour?
-    let Arms: Armour?
-    let Body: Armour?
-    let Legs: Armour?
+    var RightHand1: Weapon?
+    var RightHand2: Weapon?
+    var RightHand3: Weapon?
+    var LeftHand1: Weapon?
+    var LeftHand2: Weapon?
+    var LeftHand3: Weapon?
+    var Head: Armour?
+    var Arms: Armour?
+    var Body: Armour?
+    var Legs: Armour?
     
     init(name: String, charClass: CharacterClass, rh1: Weapon?, rh2: Weapon?, rh3: Weapon?, lh1: Weapon?, lh2: Weapon?, lh3: Weapon?, head: Armour?, arms: Armour?, body: Armour?, legs: Armour?)
     {

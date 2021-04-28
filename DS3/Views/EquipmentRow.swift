@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+//MARK: - EquipmentRow
 struct EquipmentRow: View
 {
     let equipment: Equipment
@@ -18,12 +20,12 @@ struct EquipmentRow: View
         } label: {
             HStack
             {
-                Image(equipment.ImageKey)
-                    .resizable()
-                    .frame(width: 90.0, height: 90.0)
-                Spacer()
                 Text(equipment.Name)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Spacer()
+                Image(equipment.ImageKey)
+                    .resizable()
+                    .frame(width: 45.0, height: 45.0)
             }
             .padding()
             .sheet(isPresented: $showingDetails) {
@@ -33,41 +35,126 @@ struct EquipmentRow: View
     }
 }
 
-struct EquipmentRows: View
+//MARK: - WeaponRowsTextOnly
+struct WeaponRowsTextOnly: View
+{
+    @State var weaponList = WeaponList()
+    @State var showingDetails = false
+    @Binding var selectedWeapon: Weapon?
+    
+    var body: some View
+    {
+        List
+        {
+            ForEach(Weapon.WeaponTypes.allCases, id: \.rawValue)
+            {
+                weaponType in
+                Section(header: Text(weaponType.rawValue))
+                {
+                    ForEach(weaponList.allWeapons.filter
+                    { $0.WeaponType == weaponType.rawValue })
+                    {
+                        weapon in
+                        Button(action: { selectedWeapon = weapon
+                        }, label: {
+                            WeaponNameTypeRow(weapon: weapon)
+                        })
+                    }
+                }
+            }
+        }
+    }
+}
+
+//MARK: - WeaponRows
+struct WeaponRows: View
 {
     @State var weaponList = WeaponList()
     
     var body: some View
     {
         NavigationView {
-            List(weaponList.allWeapons) { weapon in
-                EquipmentRow(
-                    equipment: weapon
-                )
-                .navigationBarTitle("My Library")
+            List(){
+                ForEach(weaponList.allWeapons, id: \.Name) { weapon in
+                    EquipmentRow(
+                        equipment: weapon
+                    )
+                    .navigationBarTitle("My Library")
+                }
             }
-            
         }
     }
-    
+    //MARK: - Previews
     struct EquipmentRow_Previews: PreviewProvider
     {
-        
-        
-        
         static var previews: some View
         {
-            //let QuickStep = Skill(name: "Quickstep", description: "Instantly step behind or around the side of foes. Especially effective when locked on to target.")
+            let allWeapons = WeaponList.init().allWeapons
+            let fumeUltra = allWeapons.first(where: { $0.Name == "Fume Ultra Greatsword" })
+            var noneWeapon = allWeapons[0]
             
-            //let Stomp = Skill(name: "Stomp", description: "Use one's weight to lunge forward with a low stance and increased poise, and follow with a crushing strong attack.")
             
-            //let Dagger = Weapon(name: "Dagger", description: "Standard small dagger.\nSmall daggers lack power or reach, but can deal quick consecutive hits due to their light weight. Highly effective when used for critical hits, such as after parrying or attacking from behind.", location: "Buy for 300 souls from Shrine Handmaid.", weight: 1.5, durability: 50, imageKey: "wpn_dagger", physAtk: 65, magAtk: 0, fireAtk: 0, lightningAtk: 0, darkAtk: 0, critical: 130, physDef: 35, magDef: 20, fireDef: 15, lightningDef: 15, darkDef: 20, stability: 15, bleed: 0, poison: 0, frost: 0, dmgType: [Weapon.DamageType.Slash.rawValue, Weapon.DamageType.Thrust.rawValue], ability: QuickStep, fpCost: 5, strReq: 5, strScale: "E", dexReq: 14, dexScale: "C", intReq: 0, intScale: "-", fthReq: 0, fthScale: "-")
-            
-            //let FumeUltraGreatsword = Weapon(name: "Fume Ultra Greatsword", description: "This twisted sword, the heaviest of all ultra greatswords, resembles black slate.\nThis weapon, said to belong to a traitor from long ago, was so heavy that it found no owner, and became a forgotten relic of history.", location: "Dropped by Knight Slayer Tsorig underneath the Smoldering Lake.  He can be found beyond the areas with the rats and the basilisks, but before the exit that goes up to the ballista.", weight: 25.5, durability: 170, imageKey: "wpn_fume_ultra_greatsword", physAtk: 149, magAtk: 0, fireAtk: 0, lightningAtk: 0, darkAtk: 0, critical: 100, physDef: 80, magDef: 55, fireDef: 65, lightningDef: 60, darkDef: 65, stability: 55, bleed: 0, poison: 0, frost: 0, dmgType: [Weapon.DamageType.Strike.rawValue], ability: Stomp, fpCost: 10, strReq: 50, strScale: "A", dexReq: 10, dexScale: "E", intReq: 0, intScale: "-", fthReq: 0, fthScale: "-")
-            
-            EquipmentRows()
-            EquipmentRows()
-                .preferredColorScheme(.dark)
+            //WeaponRows()
+            //WeaponRows()
+            //.preferredColorScheme(.dark)
+            //WeaponRowsTextOnly(selectedWeapon: .constant(nil))
+            WeaponPickerList(weapon: .constant(noneWeapon))
+        }
+    }
+}
+
+//MARK: - WeaponNameTypeRow
+struct WeaponNameTypeRow: View
+{
+    let weapon: Weapon?
+    
+    var body: some View
+    {
+        HStack
+        {
+            VStack(alignment: .leading)
+            {
+                Text(weapon?.Name ?? "None")
+                    .font(.headline)
+                Text(weapon?.WeaponType ?? "")
+                    .font(.subheadline)
+            }
+            Spacer()
+        }
+    }
+}
+
+//MARK: - WeaponPickerList
+struct WeaponPickerList: View
+{
+    let allWeapons = WeaponList.init().allWeapons
+    @State private var selectedWeapon = 0
+    @Binding var weapon: Weapon
+
+    
+    var body: some View
+    {
+        NavigationView{
+            Form
+            {
+//                Picker(selection: $selectedWeapon, label: Text(allWeapons[selectedWeapon].Name)) {
+//                    ForEach(allWeapons) { weapon in
+//                        WeaponNameTypeRow(weapon: weapon)
+//                    }
+//                }
+                Picker("Weapon", selection: $selectedWeapon)
+                {
+                    ForEach(0...allWeapons.count-1, id: \.self)
+                    {
+                        weapon in
+                        Text(allWeapons[weapon].Name)
+                            //.tag(weapon.Name)
+                    }
+                }.onChange(of: selectedWeapon) {
+                    value in
+                    print(value)
+                }
+            }
         }
     }
 }

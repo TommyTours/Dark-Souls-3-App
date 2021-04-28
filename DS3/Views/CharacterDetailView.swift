@@ -118,6 +118,34 @@ struct CharacterAttributesView : View
     }
 }
 
+struct CharacterWeaponRows: View
+{
+    @Binding var character: Character
+    var body: some View
+    {
+        List {
+            WeaponRow(weapon: $character.RightHand1)
+            WeaponRow(weapon: $character.RightHand2)
+            WeaponRow(weapon: $character.RightHand3)
+        }
+    }
+}
+
+struct WeaponRow: View
+{
+    @Binding var weapon: Weapon?
+    var body: some View
+    {
+        if weapon != nil {
+            NavigationLink(destination: WeaponDetailView(weapon: weapon!)){
+                Text(weapon!.Name)
+            }
+        } else {
+            Text("None")
+        }
+    }
+}
+
 //struct NumberStepper: View
 //{
 //    var value: Int
@@ -156,9 +184,11 @@ struct CharacterDetailView_Previews: PreviewProvider
         let legs = myArmourList.first(where: {$0.Name == "Wolf Knight Leggings"})
         let arms = myArmourList.first(where: {$0.Name == "Wolf Knight Gauntlets"})
         
-        let testChar = Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: nil, rh3: nil, lh1: shield, lh2: nil, lh3: nil, head: helm, arms: arms, body: body, legs: legs)       //Character(Name: "Dave", Level: 10, Vigor: 3, Attunement: 4, Endurance: 5, Vitality: 6, Strength: 7, Dexterity: 8, Intelligence: 9, Faith: 10, Luck: 11, RightHand1: sword, RightHand2: nil, RightHand3: nil, LeftHand1: shield, LeftHand2: nil, LeftHand3: nil, Head: helm, Arms: arms, Body: armour, Legs: legs)
+        var testChar = Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: nil, rh3: nil, lh1: shield, lh2: nil, lh3: nil, head: helm, arms: arms, body: body, legs: legs)
+        CharacterWeaponRows(character: .constant(Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: nil, rh3: nil, lh1: shield, lh2: nil, lh3: nil, head: helm, arms: arms, body: body, legs: legs)
+))
         
-        CharacterDetailView(character: testChar)
+        //CharacterDetailView(character: testChar)
         //CharacterAttributesView(character: testChar)
         //NumberStepper(value: testChar.Strength)
     }

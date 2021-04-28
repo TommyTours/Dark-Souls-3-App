@@ -14,6 +14,8 @@
 		E240C3802625F92A00125A96 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240C37F2625F92A00125A96 /* Attributes.swift */; };
 		E25DC3A6261B77D7008112D9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DC3A5261B77D7008112D9 /* Skill.swift */; };
 		E25DC3AC261C5740008112D9 /* fumeUltra.json in Resources */ = {isa = PBXBuildFile; fileRef = E25DC3AB261C5740008112D9 /* fumeUltra.json */; };
+		E267C93A262DA48700520438 /* SingleCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267C939262DA48700520438 /* SingleCharacterView.swift */; };
+		E29179E9262CBCF400617B71 /* CharacterSupportViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29179E8262CBCF300617B71 /* CharacterSupportViews.swift */; };
 		E295A153261B30BB00FA2C07 /* DS3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A152261B30BB00FA2C07 /* DS3App.swift */; };
 		E295A155261B30BB00FA2C07 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E295A154261B30BB00FA2C07 /* ContentView.swift */; };
 		E295A157261B30C000FA2C07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E295A156261B30C000FA2C07 /* Assets.xcassets */; };
@@ -56,6 +58,8 @@
 		E240C37F2625F92A00125A96 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		E25DC3A5261B77D7008112D9 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
 		E25DC3AB261C5740008112D9 /* fumeUltra.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = fumeUltra.json; path = "../../../../../../../Dropbox/Uni/Year 3/Mobile Apps/fumeUltra.json"; sourceTree = "<group>"; };
+		E267C939262DA48700520438 /* SingleCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterView.swift; sourceTree = "<group>"; };
+		E29179E8262CBCF300617B71 /* CharacterSupportViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSupportViews.swift; sourceTree = "<group>"; };
 		E295A14F261B30BB00FA2C07 /* DS3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DS3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E295A152261B30BB00FA2C07 /* DS3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS3App.swift; sourceTree = "<group>"; };
 		E295A154261B30BB00FA2C07 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -198,6 +202,8 @@
 				E2E138822621EE8200D3AE08 /* CharacterDetailView.swift */,
 				E240C36B2624861000125A96 /* ArmourDetailView.swift */,
 				E240C37A2625BD6C00125A96 /* CharacterCreationView.swift */,
+				E29179E8262CBCF300617B71 /* CharacterSupportViews.swift */,
+				E267C939262DA48700520438 /* SingleCharacterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -343,7 +349,9 @@
 				E295A198261B4A5100FA2C07 /* WeaponDetailView.swift in Sources */,
 				E2AAC8DC261C86980000404D /* EquipmentRow.swift in Sources */,
 				E295A18A261B323C00FA2C07 /* Equipment.swift in Sources */,
+				E29179E9262CBCF400617B71 /* CharacterSupportViews.swift in Sources */,
 				E2E138792621ECAC00D3AE08 /* Character.swift in Sources */,
+				E267C93A262DA48700520438 /* SingleCharacterView.swift in Sources */,
 				E295A153261B30BB00FA2C07 /* DS3App.swift in Sources */,
 				E240C36C2624861000125A96 /* ArmourDetailView.swift in Sources */,
 				E240C37B2625BD6C00125A96 /* CharacterCreationView.swift in Sources */,
