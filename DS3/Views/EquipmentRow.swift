@@ -79,7 +79,7 @@ struct WeaponRows: View
                     EquipmentRow(
                         equipment: weapon
                     )
-                    .navigationBarTitle("My Library")
+                    .navigationBarTitle("Weapons")
                 }
             }
         }
@@ -90,15 +90,13 @@ struct WeaponRows: View
         static var previews: some View
         {
             let allWeapons = WeaponList.init().allWeapons
-            let fumeUltra = allWeapons.first(where: { $0.Name == "Fume Ultra Greatsword" })
-            var noneWeapon = allWeapons[0]
             
             
-            //WeaponRows()
+            WeaponRows()
             //WeaponRows()
             //.preferredColorScheme(.dark)
             //WeaponRowsTextOnly(selectedWeapon: .constant(nil))
-            WeaponPickerList(weapon: .constant(noneWeapon))
+            //WeaponPickerList(label: "Test Label", weapon: .constant(noneWeapon))
         }
     }
 }
@@ -125,36 +123,60 @@ struct WeaponNameTypeRow: View
 }
 
 //MARK: - WeaponPickerList
+/// Provides a picker allowing a choice of all weapons.
+/// Will look different depending on what it is embedded in, eg. NavigationView or Form
 struct WeaponPickerList: View
 {
     let allWeapons = WeaponList.init().allWeapons
-    @State private var selectedWeapon = 0
+    let label: String
     @Binding var weapon: Weapon
-
+    @State var selectedWeapon: Int
+    
     
     var body: some View
     {
-        NavigationView{
-            Form
+        Picker(label, selection: $selectedWeapon)
+        {
+            ForEach(0...allWeapons.count-1, id: \.self)
             {
-//                Picker(selection: $selectedWeapon, label: Text(allWeapons[selectedWeapon].Name)) {
-//                    ForEach(allWeapons) { weapon in
-//                        WeaponNameTypeRow(weapon: weapon)
-//                    }
-//                }
-                Picker("Weapon", selection: $selectedWeapon)
-                {
-                    ForEach(0...allWeapons.count-1, id: \.self)
-                    {
-                        weapon in
-                        Text(allWeapons[weapon].Name)
-                            //.tag(weapon.Name)
-                    }
-                }.onChange(of: selectedWeapon) {
-                    value in
-                    print(value)
-                }
+                weapon in
+                Text(allWeapons[weapon].Name)
+                //.tag(weapon.Name)
             }
+        }
+        .onChange(of: selectedWeapon) {
+            value in
+            weapon = allWeapons[value]
+            print(value)
+        }
+    }
+}
+
+//MARK: - ArmourPickerList
+/// Provides a picker allowing a choice of all amour.
+/// Will look different depending on what it is embedded in, eg. NavigationView or Form
+struct ArmourPickerList: View
+{
+    var allArmour: [Armour]
+    var Label: String = "Armour"
+    @Binding var SelectedArmour: Armour
+    @State var ArmourNumber: Int
+    
+    var body: some View
+    {
+        Picker(Label, selection: $ArmourNumber)
+        {
+            ForEach(0...allArmour.count-1, id: \.self)
+            {
+                weapon in
+                Text(allArmour[weapon].Name)
+                //.tag(weapon.Name)
+            }
+        }
+        .onChange(of: ArmourNumber) {
+            value in
+            SelectedArmour = allArmour[value]
+            print(value)
         }
     }
 }

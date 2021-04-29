@@ -13,18 +13,18 @@ class Character: Codable
     @Published var CharClass: CharacterClass
     @Published var Level: Int
     var Attributes: Attributes
-    var RightHand1: Weapon?
-    var RightHand2: Weapon?
-    var RightHand3: Weapon?
-    var LeftHand1: Weapon?
-    var LeftHand2: Weapon?
-    var LeftHand3: Weapon?
-    var Head: Armour?
-    var Arms: Armour?
-    var Body: Armour?
-    var Legs: Armour?
+    var RightHand1: Weapon
+    var RightHand2: Weapon
+    var RightHand3: Weapon
+    var LeftHand1: Weapon
+    var LeftHand2: Weapon
+    var LeftHand3: Weapon
+    var Head: Armour
+    var Arms: Armour
+    var Body: Armour
+    var Legs: Armour
     
-    init(name: String, charClass: CharacterClass, rh1: Weapon?, rh2: Weapon?, rh3: Weapon?, lh1: Weapon?, lh2: Weapon?, lh3: Weapon?, head: Armour?, arms: Armour?, body: Armour?, legs: Armour?)
+    init(name: String, charClass: CharacterClass, rh1: Weapon, rh2: Weapon, rh3: Weapon, lh1: Weapon, lh2: Weapon, lh3: Weapon, head: Armour, arms: Armour, body: Armour, legs: Armour)
     {
         self.Name = name
         self.CharClass = charClass
@@ -45,18 +45,20 @@ class Character: Codable
     
     init()
     {
+        let noneWeapon = WeaponList.init().allWeapons[0]
+        let allArmour = ArmourList.init()
         self.Name = "name"
         self.CharClass = .Deprived
-        self.RightHand1 = nil
-        self.RightHand2 = nil
-        self.RightHand3 = nil
-        self.LeftHand1 = nil
-        self.LeftHand2 = nil
-        self.LeftHand3 = nil
-        self.Head = nil
-        self.Arms = nil
-        self.Body = nil
-        self.Legs = nil
+        self.RightHand1 = noneWeapon
+        self.RightHand2 = noneWeapon
+        self.RightHand3 = noneWeapon
+        self.LeftHand1 = noneWeapon
+        self.LeftHand2 = noneWeapon
+        self.LeftHand3 = noneWeapon
+        self.Head = allArmour.allHelms[0]
+        self.Arms = allArmour.allArms[0]
+        self.Body = allArmour.allBodys[0]
+        self.Legs = allArmour.allLegs[0]
         self.Level = 1
         self.Attributes = DS3.Attributes(vigor: 10, attunement: 10, endurance: 10, vitality: 10, strength: 10, dexterity: 10, intelligence: 10, faith: 10, luck: 10)
     }
@@ -118,16 +120,30 @@ class Character: Codable
         self.CharClass = try container.decode(CharacterClass.self, forKey: .CharClass)
         self.Level = try container.decode(Int.self, forKey: .Level)
         self.Attributes = try container.decode(DS3.Attributes.self, forKey: .Attributes)
-        self.RightHand1 = try container.decode(Weapon?.self, forKey: .RightHand1)
-        self.RightHand2 = try container.decode(Weapon?.self, forKey: .RightHand2)
-        self.RightHand3 = try container.decode(Weapon?.self, forKey: .RightHand3)
-        self.LeftHand1 = try container.decode(Weapon?.self, forKey: .LeftHand1)
-        self.LeftHand2 = try container.decode(Weapon?.self, forKey: .LeftHand2)
-        self.LeftHand3 = try container.decode(Weapon?.self, forKey: .LeftHand3)
-        self.Head = try container.decode(Armour?.self, forKey: .Head)
-        self.Body = try container.decode(Armour?.self, forKey: .Body)
-        self.Arms = try container.decode(Armour?.self, forKey: .Arms)
-        self.Legs = try container.decode(Armour?.self, forKey: .Legs)
+        self.RightHand1 = try container.decode(Weapon.self, forKey: .RightHand1)
+        self.RightHand2 = try container.decode(Weapon.self, forKey: .RightHand2)
+        self.RightHand3 = try container.decode(Weapon.self, forKey: .RightHand3)
+        self.LeftHand1 = try container.decode(Weapon.self, forKey: .LeftHand1)
+        self.LeftHand2 = try container.decode(Weapon.self, forKey: .LeftHand2)
+        self.LeftHand3 = try container.decode(Weapon.self, forKey: .LeftHand3)
+        self.Head = try container.decode(Armour.self, forKey: .Head)
+        self.Body = try container.decode(Armour.self, forKey: .Body)
+        self.Arms = try container.decode(Armour.self, forKey: .Arms)
+        self.Legs = try container.decode(Armour.self, forKey: .Legs)
+    }
+    
+    func updateAttributes(vigor: Int, attunement: Int, endurance: Int, vitality: Int, strength: Int, dexterity: Int, intelligence: Int, faith: Int, luck: Int, level: Int)
+    {
+        self.Attributes.Vigor = vigor
+        self.Attributes.Attunement = attunement
+        self.Attributes.Endurance = endurance
+        self.Attributes.Vitality = vitality
+        self.Attributes.Strength = strength
+        self.Attributes.Dexterity = dexterity
+        self.Attributes.Intelligence = intelligence
+        self.Attributes.Faith = faith
+        self.Attributes.Luck = luck
+        self.Level = level
     }
 }
 

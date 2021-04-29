@@ -7,8 +7,16 @@
 
 import Foundation
 
-final class Armour: Equipment
+final class Armour: Equipment, Hashable
 {
+    static func == (lhs: Armour, rhs: Armour) -> Bool {
+        lhs.Name == rhs.Name
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(Name)
+    }
+    
     let PhysDef: Double
     let StrikeDef: Double
     let SlashDef: Double
@@ -22,8 +30,9 @@ final class Armour: Equipment
     let FrostRes: Int
     let CurseRes: Int
     let Poise: Double
+    let Position: ArmourPosition.RawValue
     
-    init(physDef: Double, strikeDef: Double, slashDef: Double, thrustDef: Double, magicDef: Double, fireDef: Double, lightningDef: Double, darkDef: Double, bleedRes: Int, poisonRes: Int, frostRes: Int, curseRes: Int, poise: Double, name: String, description: String, location: String, weight: Float, durability: Int, imageKey: String)
+    init(physDef: Double, strikeDef: Double, slashDef: Double, thrustDef: Double, magicDef: Double, fireDef: Double, lightningDef: Double, darkDef: Double, bleedRes: Int, poisonRes: Int, frostRes: Int, curseRes: Int, poise: Double, name: String, description: String, location: String, weight: Float, durability: Int, imageKey: String, position: ArmourPosition)
     {
         self.PhysDef = physDef
         self.StrikeDef = strikeDef
@@ -38,6 +47,7 @@ final class Armour: Equipment
         self.FrostRes = frostRes
         self.CurseRes = curseRes
         self.Poise = poise
+        self.Position = position.rawValue
         super.init(name: name, description: description, location: location, weight: weight, durability: durability, imageKey: imageKey)
     }
     
@@ -57,6 +67,7 @@ final class Armour: Equipment
         self.FrostRes = try container.decode(Int.self, forKey: .FrostRes)
         self.CurseRes = try container.decode(Int.self, forKey: .CurseRes)
         self.Poise = try container.decode(Double.self, forKey: .Poise)
+        self.Position = try container.decode(String.self, forKey: .Position)
         
         let superDecoder = try container.superDecoder(forKey: .Equipment)
         try super.init(from: superDecoder)
@@ -79,6 +90,7 @@ final class Armour: Equipment
         try container.encode(FrostRes, forKey: .FrostRes)
         try container.encode(CurseRes, forKey: .CurseRes)
         try container.encode(Poise, forKey: .Poise)
+        try container.encode(Position, forKey: .Position)
         let superEncoder = container.superEncoder(forKey: .Equipment)
         try super.encode(to: superEncoder)
     }
@@ -112,5 +124,14 @@ final class Armour: Equipment
         case CurseRes
         case Poise
         case Equipment
+        case Position
+    }
+    
+    enum ArmourPosition: String
+    {
+        case Head = "Head"
+        case Body = "Body"
+        case Arms = "Arms"
+        case Legs = "Legs"
     }
 }

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CharacterCreationView: View
 {
+    @Binding var characterList: CharacterList
+    //@Binding var isShowingNewCharacter: Bool
     //@State private var newCharacter = Character()
     @State private var charName = ""
     
@@ -38,6 +40,12 @@ struct CharacterCreationView: View
     
     @State private var luck = Character.ReturnBaseAttributeDict(charClass: Character.CharacterClass.Deprived)["Luck"]!
     
+    let noneWeapon = WeaponList.init().allWeapons.first!
+    let noneHelmet = ArmourList.init().allHelms.first!
+    let noneBody = ArmourList.init().allBodys.first!
+    let noneArms = ArmourList.init().allArms.first!
+    let noneLegs = ArmourList.init().allLegs.first!
+    
     var body: some View
     {
         NavigationView
@@ -62,12 +70,14 @@ struct CharacterCreationView: View
                 }
                 Section(header: Text("Attributes"))
                 {
-                AttributesView(vgr: $vgr, att: $att, end: $end, vit: $vit, str: $str, dex: $dex, intel: $intel, fth: $fth, luck: $luck, level: $level, baseAttributes: Character.ReturnBaseAttributeDict(charClass: selectedClass))
+                AttributesViewEmbed(vgr: $vgr, att: $att, end: $end, vit: $vit, str: $str, dex: $dex, intel: $intel, fth: $fth, luck: $luck, level: $level, baseAttributes: Character.ReturnBaseAttributeDict(charClass: selectedClass))
                 }
                 Button(action: {
-                        let newCharacter = Character(name: charName, charClass: selectedClass, rh1: nil, rh2: nil, rh3: nil, lh1: nil, lh2: nil, lh3: nil, head: nil, arms: nil, body: nil, legs: nil)
+                        var newCharacter = Character(name: charName, charClass: selectedClass, rh1: noneWeapon, rh2: noneWeapon, rh3: noneWeapon, lh1: noneWeapon, lh2: noneWeapon, lh3: noneWeapon, head: noneHelmet, arms: noneArms, body: noneBody, legs: noneLegs)
                             print(newCharacter)
-                    //CharacterList.add(newCharacter)
+                    characterList.addCharacter(newCharacter: newCharacter)
+                    //isShowingNewCharacter = false
+                    //SingleCharacterView(initCharacter: newCharacter)
                     
                 }, label: { Text("Create Character")
                         })
@@ -209,8 +219,8 @@ struct StepperView: View {
 struct CharacterCreationView_Previews: PreviewProvider {
     static var previews: some View {
         //var testChar = Character(name: "", charClass: Character.CharacterClass.Deprived, rh1: nil, rh2: nil, rh3: nil, lh1: nil, lh2: nil, lh3: nil, head: nil, arms: nil, body: nil, legs: nil)
-        CharacterCreationView()
-        CharacterCreationView()
+        CharacterCreationView(characterList: .constant(CharacterList.init()))//, isShowingNewCharacter: .constant(false))
+        CharacterCreationView(characterList: .constant(CharacterList.init()))//, isShowingNewCharacter: .constant(false))
             .preferredColorScheme(.dark)
         //StatCounter(value: .constant(1), statPoints: .constant(0))
         //StepperView(value: .constant(1), level: .constant(1), label: "Poop")

@@ -189,7 +189,7 @@ struct DescriptionView: View
 struct ArmourDetailView_Previews: PreviewProvider {
     static var previews: some View {
         
-        let wolfKnightHelm = Armour(physDef: 4.4, strikeDef: 3.8, slashDef: 4.4, thrustDef: 4.4, magicDef: 3.0, fireDef: 4.2, lightningDef: 2.2, darkDef: 3.8, bleedRes: 23, poisonRes: 16, frostRes: 17, curseRes: 17, poise: 2.9, name: "Wolf Knight Helm", description: "Helm of a knight tainted by the dark of the Abyss. The twilight blue tassel is damp, and will ever remain so.\nA vanquished knight left behind only wolf's blood, and legacy of duty. The Undead Legion of Farron was formed to bear his torch, and the armor of these Abyss Watchers suggests their own eventual end.", location: "Buy from Shrine Handmaid in Untended Graves for 10,000 Souls", weight: 4.2, durability: 360, imageKey: "arm_wolf_knight_helm")
+        let wolfKnightHelm = Armour(physDef: 4.4, strikeDef: 3.8, slashDef: 4.4, thrustDef: 4.4, magicDef: 3.0, fireDef: 4.2, lightningDef: 2.2, darkDef: 3.8, bleedRes: 23, poisonRes: 16, frostRes: 17, curseRes: 17, poise: 2.9, name: "Wolf Knight Helm", description: "Helm of a knight tainted by the dark of the Abyss. The twilight blue tassel is damp, and will ever remain so.\nA vanquished knight left behind only wolf's blood, and legacy of duty. The Undead Legion of Farron was formed to bear his torch, and the armor of these Abyss Watchers suggests their own eventual end.", location: "Buy from Shrine Handmaid in Untended Graves for 10,000 Souls", weight: 4.2, durability: 360, imageKey: "arm_wolf_knight_helm", position: Armour.ArmourPosition.Head)
         
         ArmourDetailView(armour: wolfKnightHelm)
         ArmourDetailView(armour: wolfKnightHelm)

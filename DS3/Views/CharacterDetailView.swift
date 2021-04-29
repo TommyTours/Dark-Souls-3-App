@@ -21,25 +21,25 @@ struct CharacterDetailView: View
             CharacterAttributesView(character: character)
             Group
             {
-                let helm = character.Head?.Name ?? "None"
+                let helm = character.Head.Name
                 Text("Head: \(helm)")
-                let chest = character.Body?.Name ?? "None"
+                let chest = character.Body.Name
                 Text("Chest: \(chest)")
-                let arms = character.Arms?.Name ?? "None"
+                let arms = character.Arms.Name
                 Text("Arms: \(arms)")
-                let legs = character.Legs?.Name ?? "None"
+                let legs = character.Legs.Name
                 Text("Legs: \(legs)")
-                let lh1 = character.LeftHand1?.Name ?? "None"
+                let lh1 = character.LeftHand1.Name
                 Text("Left Hand 1: \(lh1)")
-                let lh2 = character.LeftHand2?.Name ?? "None"
+                let lh2 = character.LeftHand2.Name
                 Text("Left Hand 2: \(lh2)")
-                let lh3 = character.LeftHand3?.Name ?? "None"
+                let lh3 = character.LeftHand3.Name
                 Text("Left Hand 3: \(lh3)")
-                let rh1 = character.RightHand1?.Name ?? "None"
+                let rh1 = character.RightHand1.Name
                 Text("Right Hand 1: \(rh1)")
-                let rh2 = character.RightHand2?.Name ?? "None"
+                let rh2 = character.RightHand2.Name
                 Text("Right Hand 2: \(rh2)")
-                let rh3 = character.RightHand3?.Name ?? "None"
+                let rh3 = character.RightHand3.Name
                 Text("Right Hand 3: \(rh3)")
             }
         }
@@ -133,12 +133,12 @@ struct CharacterWeaponRows: View
 
 struct WeaponRow: View
 {
-    @Binding var weapon: Weapon?
+    @Binding var weapon: Weapon
     var body: some View
     {
         if weapon != nil {
-            NavigationLink(destination: WeaponDetailView(weapon: weapon!)){
-                Text(weapon!.Name)
+            NavigationLink(destination: WeaponDetailView(weapon: weapon)){
+                Text(weapon.Name)
             }
         } else {
             Text("None")
@@ -177,15 +177,16 @@ struct CharacterDetailView_Previews: PreviewProvider
         let myWeaponList = WeaponList.init().allWeapons
         let myArmourList = ArmourList.init().allArmours
         
-        let sword = myWeaponList.first(where: {$0.Name == "Fume Ultra Greatsword"})
-        let shield = myWeaponList.first(where: {$0.Name == "Grass Crest Shield"})
-        let helm = myArmourList.first(where: {$0.Name == "Wolf Knight Helm"})
-        let body = myArmourList.first(where: {$0.Name == "Wolf Knight Armor"})
-        let legs = myArmourList.first(where: {$0.Name == "Wolf Knight Leggings"})
-        let arms = myArmourList.first(where: {$0.Name == "Wolf Knight Gauntlets"})
+        let sword = myWeaponList.first(where: {$0.Name == "Fume Ultra Greatsword"})!
+        let noneWeapon = myWeaponList.first!
+        let shield = myWeaponList.first(where: {$0.Name == "Grass Crest Shield"})!
+        let helm = myArmourList.first(where: {$0.Name == "Wolf Knight Helm"})!
+        let body = myArmourList.first(where: {$0.Name == "Wolf Knight Armor"})!
+        let legs = myArmourList.first(where: {$0.Name == "Wolf Knight Leggings"})!
+        let arms = myArmourList.first(where: {$0.Name == "Wolf Knight Gauntlets"})!
         
-        var testChar = Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: nil, rh3: nil, lh1: shield, lh2: nil, lh3: nil, head: helm, arms: arms, body: body, legs: legs)
-        CharacterWeaponRows(character: .constant(Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: nil, rh3: nil, lh1: shield, lh2: nil, lh3: nil, head: helm, arms: arms, body: body, legs: legs)
+        var testChar = Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: noneWeapon, rh3: noneWeapon, lh1: shield, lh2: noneWeapon, lh3: noneWeapon, head: helm, arms: arms, body: body, legs: legs)
+        CharacterWeaponRows(character: .constant(Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: noneWeapon, rh3: noneWeapon, lh1: shield, lh2: noneWeapon, lh3: noneWeapon, head: helm, arms: arms, body: body, legs: legs)
 ))
         
         //CharacterDetailView(character: testChar)
