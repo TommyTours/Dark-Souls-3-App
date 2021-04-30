@@ -14,14 +14,24 @@ struct ContentView: View {
     let myWeaponList = WeaponList.init()
     let myArmourList = ArmourList.init()
     var body: some View {
-        if myCharacterList.allCharacters.count != 0
-        {
-            SingleCharacterView(initCharacter: myCharacterList.allCharacters.first!)
+        TabView {
+            CharacterMasterView(myCharacterList: $myCharacterList)
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Character")
+                }
+            BrowseWeaponsView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Weapons")
+                }
+            BrowseArmourView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("Armour")
+                }
         }
-        else
-        {
-            CharacterCreationView(characterList: $myCharacterList)
-        }
+    }
         //            .onAppear {
         //                //character.encode()
         //            }
@@ -40,7 +50,6 @@ struct ContentView: View {
         //                    print(error)
         //                }
         //            }
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {

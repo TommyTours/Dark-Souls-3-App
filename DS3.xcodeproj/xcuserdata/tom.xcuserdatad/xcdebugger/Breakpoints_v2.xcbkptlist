@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "D11D5644-0E0A-41EC-BB06-6FE4928BC674"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43502CF4-A46D-45D1-80AC-554D88E752C4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/SingleCharacterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "325C5884-ABE2-4959-898F-27776DA5F998"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/CharacterSupportViews.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "AttributesViewNavView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "325C5884-ABE2-4959-898F-27776DA5F998 - e6ce4391473039d2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.AttributesViewNavView.vgr.getter : Swift.Int"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/CharacterSupportViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "181">
+               </Location>
+               <Location
+                  uuid = "325C5884-ABE2-4959-898F-27776DA5F998 - 1cee4df015a3f5de"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.AttributesViewNavView.vgr.setter : Swift.Int"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/CharacterSupportViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "154">
+               </Location>
+               <Location
+                  uuid = "325C5884-ABE2-4959-898F-27776DA5F998 - 3b2964f20f9fd8b4"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.AttributesViewNavView.vgr.modify : Swift.Int"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "46">
+               </Location>
+               <Location
+                  uuid = "325C5884-ABE2-4959-898F-27776DA5F998 - d3ca05645d5d56de"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.AttributesViewNavView.vgr.modify : Swift.Int with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/CharacterSupportViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "325C5884-ABE2-4959-898F-27776DA5F998 - 5dcbfb227e35ef06"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.AttributesViewNavView.$vgr.getter : SwiftUI.Binding&lt;Swift.Int&gt;"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/CharacterSupportViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "215">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64794455-3196-44E3-9F3C-760E68BEF026"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/RequirementsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "init(character:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB688AF8-6371-423B-AEE2-D5BEA7B9FC1E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/RequirementsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "init(character:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FB688AF8-6371-423B-AEE2-D5BEA7B9FC1E - f4a42e92a72ce5ca"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DS3.RequirementsView.init(character: DS3.Character) -&gt; DS3.RequirementsView"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/RequirementsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "472">
+               </Location>
+               <Location
+                  uuid = "FB688AF8-6371-423B-AEE2-D5BEA7B9FC1E - 9d10395be4e0eba9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (DS3.Weapon, DS3.Weapon) -&gt; Swift.Bool in DS3.RequirementsView.init(character: DS3.Character) -&gt; DS3.RequirementsView"
+                  moduleName = "DS3"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tom/Library/Mobile%20Documents/com~apple~CloudDocs/Xcode%20projects/DS3/DS3/Views/RequirementsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BACE10A-1FC3-48FE-A257-404545522881"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Models/Attributes.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "getRequiredSouls(current:required:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D8C3FF54-576C-46BE-AB27-A532FF4C6953"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/RequirementsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "init(character:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3827EFD-D016-408B-8DAB-A663117EA94E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DS3/Views/SingleCharacterView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

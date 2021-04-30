@@ -131,6 +131,9 @@ struct WeaponPickerList: View
     let label: String
     @Binding var weapon: Weapon
     @State var selectedWeapon: Int
+    @Binding var totalWeight: Double
+    @Binding var percentage: Double
+    let currentLimit: Double
     
     
     var body: some View
@@ -146,7 +149,10 @@ struct WeaponPickerList: View
         }
         .onChange(of: selectedWeapon) {
             value in
+            totalWeight -= Double(weapon.Weight)
             weapon = allWeapons[value]
+            totalWeight += Double(weapon.Weight)
+            percentage = (totalWeight/currentLimit) * 100
             print(value)
         }
     }
@@ -161,6 +167,9 @@ struct ArmourPickerList: View
     var Label: String = "Armour"
     @Binding var SelectedArmour: Armour
     @State var ArmourNumber: Int
+    @Binding var totalWeight: Double
+    @Binding var percentage: Double
+    let currentLimit: Double
     
     var body: some View
     {
@@ -175,7 +184,10 @@ struct ArmourPickerList: View
         }
         .onChange(of: ArmourNumber) {
             value in
+            totalWeight -= Double(SelectedArmour.Weight)
             SelectedArmour = allArmour[value]
+            totalWeight += Double(SelectedArmour.Weight)
+            percentage = (totalWeight/currentLimit) * 100
             print(value)
         }
     }

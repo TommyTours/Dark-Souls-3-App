@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #2 in ContentView.body.getter:ContentView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "StepperView.decrementStep():CharacterCreationView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value">
+            </PersistentString>
+            <PersistentString
+               value = "level">
+            </PersistentString>
+            <PersistentString
+               value = "min">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Weapon.encode():Weapon.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Weapon.init(from:):Weapon.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Equipment.init(from:):Equipment.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "decoder.container(keyedBy: CodingKeys.self)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #2 in closure #1 in closure #1 in SingleCharacterView.body.getter:SingleCharacterView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
