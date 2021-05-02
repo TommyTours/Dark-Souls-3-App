@@ -12,18 +12,21 @@ struct WeaponDetailView: View
     let weapon: Weapon
     var body: some View
     {
-        VStack
+        ScrollView
         {
-            WeaponNameImageView(weapon: weapon)
-                .padding(.top)
-            AtkDefView(weapon: weapon)
-                .padding(.bottom)
-            AddedEffectView(weapon: weapon)
-                .padding(.bottom)
-            WeaponAttributesView(weapon: weapon)
-                .padding(.bottom)
-            SkillDescriptionView(weapon: weapon)
-            Spacer()
+            VStack
+            {
+                WeaponNameImageView(weapon: weapon)
+                    .padding(.top)
+                AtkDefView(weapon: weapon)
+                    .padding(.bottom)
+                AddedEffectView(weapon: weapon)
+                    .padding(.bottom)
+                WeaponAttributesView(weapon: weapon)
+                    .padding(.bottom)
+                SkillDescriptionView(weapon: weapon)
+                Spacer()
+            }
         }
     }
 }
@@ -252,71 +255,71 @@ struct AttributeViewGrid: View
 {
     let weapon: Weapon
     
-//    let data = [
-//        Text(""),
-//        GridHeadText(text: "Str"),
-//        GridHeadText(text: "Dex"),
-//        GridHeadText(text: "Int"),
-//        GridHeadText(text: "Fth"),
-//        GridHeadText(text: "Required"),
-//        GridDataText(text: Strin g(weapon.StrReq)),
-//        GridDataText(text: String(weapon.DexReq)),
-//        GridDataText(text: String(weapon.IntReq)),
-//        GridDataText(text: String(weapon.FthReq)), ]
+    //    let data = [
+    //        Text(""),
+    //        GridHeadText(text: "Str"),
+    //        GridHeadText(text: "Dex"),
+    //        GridHeadText(text: "Int"),
+    //        GridHeadText(text: "Fth"),
+    //        GridHeadText(text: "Required"),
+    //        GridDataText(text: Strin g(weapon.StrReq)),
+    //        GridDataText(text: String(weapon.DexReq)),
+    //        GridDataText(text: String(weapon.IntReq)),
+    //        GridDataText(text: String(weapon.FthReq)), ]
     var columns: [GridItem] =
         [.init(.flexible()),
          .init(.flexible()),
          .init(.flexible()),
          .init(.flexible()),
          .init(.flexible())]
-
+    
     var body: some View {
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: 2) {
-                    ForEach((0...100), id: \.self) { index in
-                        RoundedRectangle(cornerRadius: 5)
-                            .foregroundColor(.pink)
-                            .frame(height: 50)
-                        RoundedRectangle(cornerRadius: 5)
-                            .foregroundColor(.blue)
-                            .frame(height: 50)
-                    }
-                }.font(.body)
-            }
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 2) {
+                ForEach((0...100), id: \.self) { index in
+                    RoundedRectangle(cornerRadius: 5)
+                        .foregroundColor(.pink)
+                        .frame(height: 50)
+                    RoundedRectangle(cornerRadius: 5)
+                        .foregroundColor(.blue)
+                        .frame(height: 50)
+                }
+            }.font(.body)
         }
-
-
-//
-//    func createGridItems() -> [Text]
-//    {
-//        let returnArr = [Text(""),
-//                         Text("Str"),
-//                         Text("Dex"),
-//                         Text("Int"),
-//                         Text("Fth"),
-//                         Text("Required"),
-//                         Text(String(weapon.StrReq)),
-//                         Text(String(weapon.DexReq)),
-//                         Text(String(weapon.IntReq)),
-//                         Text(String(weapon.FthReq)),
-//                         Text("Bonus"),
-//                         Text(weapon.StrScale),
-//                         Text(weapon.DexScale),
-//                         Text(weapon.IntScale),
-//                         Text(weapon.FthScale)]
-//
-//        return returnArr
-//    }
+    }
+    
+    
+    //
+    //    func createGridItems() -> [Text]
+    //    {
+    //        let returnArr = [Text(""),
+    //                         Text("Str"),
+    //                         Text("Dex"),
+    //                         Text("Int"),
+    //                         Text("Fth"),
+    //                         Text("Required"),
+    //                         Text(String(weapon.StrReq)),
+    //                         Text(String(weapon.DexReq)),
+    //                         Text(String(weapon.IntReq)),
+    //                         Text(String(weapon.FthReq)),
+    //                         Text("Bonus"),
+    //                         Text(weapon.StrScale),
+    //                         Text(weapon.DexScale),
+    //                         Text(weapon.IntScale),
+    //                         Text(weapon.FthScale)]
+    //
+    //        return returnArr
+    //    }
 }
 
 struct GridHeadText: View
 {
-     let text: String
+    let text: String
     
-     var body: some View
-     {
+    var body: some View
+    {
         Text(text)
-     }
+    }
 }
 
 struct GridDataText: View
