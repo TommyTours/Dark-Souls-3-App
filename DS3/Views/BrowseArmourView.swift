@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BrowseArmourView: View {
     var body: some View {
-        Text("Browse Armour Goes Here")
+        ArmourRowsTextOnly()
     }
 }
 

@@ -127,7 +127,7 @@ final class Armour: Equipment, Hashable
         case Position
     }
     
-    enum ArmourPosition: String
+    enum ArmourPosition: String, CaseIterable
     {
         case Head = "Head"
         case Body = "Body"

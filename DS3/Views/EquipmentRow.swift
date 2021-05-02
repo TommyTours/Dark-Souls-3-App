@@ -20,12 +20,12 @@ struct EquipmentRow: View
         } label: {
             HStack
             {
-                Text(equipment.Name)
-                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                Spacer()
                 Image(equipment.ImageKey)
                     .resizable()
                     .frame(width: 45.0, height: 45.0)
+                Text(equipment.Name)
+                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                Spacer()
             }
             .padding()
             .sheet(isPresented: $showingDetails) {
@@ -39,29 +39,60 @@ struct EquipmentRow: View
 struct WeaponRowsTextOnly: View
 {
     @State var weaponList = WeaponList()
-    @State var showingDetails = false
-    @Binding var selectedWeapon: Weapon?
     
     var body: some View
     {
-        List
+        NavigationView
         {
-            ForEach(Weapon.WeaponTypes.allCases, id: \.rawValue)
+            List
             {
-                weaponType in
-                Section(header: Text(weaponType.rawValue))
+                ForEach(Weapon.WeaponTypes.allCases, id: \.rawValue)
                 {
-                    ForEach(weaponList.allWeapons.filter
-                    { $0.WeaponType == weaponType.rawValue })
+                    weaponType in
+                    Section(header: Text(weaponType.rawValue))
                     {
-                        weapon in
-                        Button(action: { selectedWeapon = weapon
-                        }, label: {
+                        ForEach(weaponList.allWeapons.filter
+                        { $0.WeaponType == weaponType.rawValue })
+                        {
+                            weapon in
                             WeaponNameTypeRow(weapon: weapon)
-                        })
+                        }
                     }
                 }
             }
+            .navigationBarTitle("Weapons")
+        }
+    }
+}
+
+//MARK: - ArmourRowsTextOnly
+struct ArmourRowsTextOnly: View
+{
+    @State var armourList = ArmourList()
+    
+    var body: some View
+    {
+        NavigationView
+        {
+            List
+            {
+                ForEach(Armour.ArmourPosition.allCases, id:\.rawValue)
+                {
+                    armourType in
+                    Section(header: Text(armourType.rawValue))
+                    {
+                        ForEach(armourList.allArmours.filter { $0.Position == armourType.rawValue})
+                        {
+                            armour in
+                            if armour.Name.uppercased() != "NONE"
+                            {
+                                ArmourNameTypeRow(armour: armour)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationBarTitle("Armour")
         }
     }
 }
@@ -76,14 +107,19 @@ struct WeaponRows: View
         NavigationView {
             List(){
                 ForEach(weaponList.allWeapons, id: \.Name) { weapon in
-                    EquipmentRow(
-                        equipment: weapon
-                    )
-                    .navigationBarTitle("Weapons")
+                    //                    EquipmentRow(
+                    //                        equipment: weapon
+                    //                    )
+                    if weapon.Name.uppercased() != "NONE"
+                    {
+                        WeaponNameTypeRow(weapon: weapon)
+                    }
                 }
             }
+            .navigationBarTitle("Weapons")
         }
     }
+    
     //MARK: - Previews
     struct EquipmentRow_Previews: PreviewProvider
     {
@@ -92,7 +128,11 @@ struct WeaponRows: View
             let allWeapons = WeaponList.init().allWeapons
             
             
-            WeaponRows()
+            Group {
+                ArmourRowsTextOnly()//selectedWeapon: .constant(allWeapons[1]))
+                ArmourRowsTextOnly()//selectedWeapon: .constant(allWeapons[1]))
+                    .previewDevice("iPhone SE (2nd generation)")
+            }
             //WeaponRows()
             //.preferredColorScheme(.dark)
             //WeaponRowsTextOnly(selectedWeapon: .constant(nil))
@@ -108,16 +148,44 @@ struct WeaponNameTypeRow: View
     
     var body: some View
     {
-        HStack
+        NavigationLink(
+            destination: WeaponDetailView(weapon: weapon!))
         {
-            VStack(alignment: .leading)
+            HStack
             {
-                Text(weapon?.Name ?? "None")
-                    .font(.headline)
-                Text(weapon?.WeaponType ?? "")
-                    .font(.subheadline)
+                VStack(alignment: .leading)
+                {
+                    Text(weapon?.Name ?? "None")
+                        .font(.headline)
+                    Text(weapon?.WeaponType ?? "")
+                        .font(.subheadline)
+                }
+                Spacer()
             }
-            Spacer()
+        }
+    }
+}
+
+//MARK: - ArmourNameTypeRow
+struct ArmourNameTypeRow: View
+{
+    let armour: Armour
+    
+    var body: some View
+    {
+        NavigationLink(destination: ArmourDetailView(armour: armour))
+        {
+            HStack
+            {
+                VStack(alignment: .leading)
+                {
+                    Text(armour.Name)
+                        .font(.headline)
+                    Text(armour.Position)
+                        .font(.subheadline)
+                }
+                Spacer()
+            }
         }
     }
 }
