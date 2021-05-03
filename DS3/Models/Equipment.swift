@@ -11,7 +11,7 @@ import Foundation
 /// - Class to represent a piece of equipment, subclasses are `Weapon` & `Armour`.
 /// I had wanted to have this inherit from `Item` but ran into issues with the second layer
 /// of subclassing, so unfortunately some values are repeated
-class Equipment: Codable, Identifiable
+class Equipment: Codable, Identifiable, ObservableObject
 {
     
     let Name: String
