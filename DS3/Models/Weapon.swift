@@ -199,6 +199,7 @@ extension Weapon {
         case Strike = "Strike"
         case Thrust = "Thrust"
         case Slash = "Slash"
+        case Bow = "Bow"
     }
     
     enum Scaling: String
@@ -220,7 +221,7 @@ extension Weapon {
         case CurvedSword = "Curved Sword"
         case Katana = "Katana"
         case CurvedGreatsword = "Curved Greatsword"
-        case PiercingSword = "Piercing Sword"
+        case ThrustingSword = "Thrusting Sword"
         case Axe = "Axe"
         case GreatAxe = "GreatAxe"
         case Hammer = "Hammer"
@@ -232,7 +233,6 @@ extension Weapon {
         case Whip = "Whip"
         case Bow = "Bow"
         case Greatbow = "Greatbow"
-        case Crossbow = "Crossbow"
         case Stave = "Stave"
         case Flame = "Flame"
         case Talisman = "Talisman"

@@ -13,18 +13,18 @@ struct CharacterList
     
     /// An in memory cache of weapons  that are persistently stored
     private var charactersCache: [Character] = [
-        .init(name: "Dave",
-              charClass: Character.CharacterClass.Deprived,
-              rh1: WeaponList.init().allWeapons.first(where: {$0.Name == "Fume Ultra Greatsword"})!,
-              rh2: WeaponList.init().allWeapons.first!,
-              rh3: WeaponList.init().allWeapons.first!,
-              lh1: WeaponList.init().allWeapons.first(where: {$0.Name == "Grass Crest Shield"})!,
-              lh2: WeaponList.init().allWeapons.first!,
-              lh3: WeaponList.init().allWeapons.first!,
-              head: ArmourList.init().allHelms.first(where: {$0.Name == "Wolf Knight Helm"})!,
-              arms: ArmourList.init().allArms.first(where: {$0.Name == "Wolf Knight Gauntlets"})!,
-              body: ArmourList.init().allBodys.first(where: {$0.Name == "Wolf Knight Armor"})!,
-              legs: ArmourList.init().allLegs.first(where: {$0.Name == "Wolf Knight Leggings"})!)
+//        .init(name: "Dave",
+//              charClass: Character.CharacterClass.Deprived,
+//              rh1: WeaponList.init().allWeapons.first(where: {$0.Name == "Fume Ultra Greatsword"})!,
+//              rh2: WeaponList.init().allWeapons.first!,
+//              rh3: WeaponList.init().allWeapons.first!,
+//              lh1: WeaponList.init().allWeapons.first(where: {$0.Name == "Grass Crest Shield"})!,
+//              lh2: WeaponList.init().allWeapons.first!,
+//              lh3: WeaponList.init().allWeapons.first!,
+//              head: ArmourList.init().allHelms.first(where: {$0.Name == "Wolf Knight Helm"})!,
+//              arms: ArmourList.init().allArms.first(where: {$0.Name == "Wolf Knight Gauntlets"})!,
+//              body: ArmourList.init().allBodys.first(where: {$0.Name == "Wolf Knight Armor"})!,
+//              legs: ArmourList.init().allLegs.first(where: {$0.Name == "Wolf Knight Leggings"})!)
     ]
 
     mutating func addCharacter(newCharacter: Character)

@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "wpn_pontiff_knight_great_scythe.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "wpn_pontiff_knight_great_scythe-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "wpn_pontiff_knight_great_scythe-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
