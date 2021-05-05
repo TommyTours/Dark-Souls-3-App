@@ -32,17 +32,6 @@ class Equipment: Codable, Identifiable, ObservableObject
         
     }
     
-//    required init(from decoder: Decoder) throws
-//    {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.Name = try container.decode(String.self, forKey: .Name)
-//        self.Description = try container.decode(String.self, forKey: .Description)
-//        self.Location = try container.decode(String.self, forKey: .Location)
-//        self.Weight = try container.decode(Float.self, forKey: .Weight)
-//        self.Durability = try container.decode(Int.self, forKey: .Durability)
-//
-//    }
-    
     private enum CodingKeys: String, CodingKey
     {
         case Name

@@ -10,14 +10,12 @@
 		E234FB4E263EFF3800A1BAB5 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E234FB4D263EFF3800A1BAB5 /* SplashScreenView.swift */; };
 		E240C36C2624861000125A96 /* ArmourDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240C36B2624861000125A96 /* ArmourDetailView.swift */; };
 		E240C371262494FA00125A96 /* ArmourList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240C370262494FA00125A96 /* ArmourList.swift */; };
-		E240C3762625B99A00125A96 /* CharacterEncoded.json in Resources */ = {isa = PBXBuildFile; fileRef = E240C3752625B99A00125A96 /* CharacterEncoded.json */; };
 		E240C37B2625BD6C00125A96 /* CharacterCreationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240C37A2625BD6C00125A96 /* CharacterCreationView.swift */; };
 		E240C3802625F92A00125A96 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E240C37F2625F92A00125A96 /* Attributes.swift */; };
 		E24B125A263C4D7A002FF0C5 /* BrowseWeaponsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B1259263C4D7A002FF0C5 /* BrowseWeaponsView.swift */; };
 		E24B125C263C4D98002FF0C5 /* BrowseArmourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B125B263C4D98002FF0C5 /* BrowseArmourView.swift */; };
 		E24B125E263C4DD4002FF0C5 /* CharacterMasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B125D263C4DD4002FF0C5 /* CharacterMasterView.swift */; };
 		E25DC3A6261B77D7008112D9 /* Skill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25DC3A5261B77D7008112D9 /* Skill.swift */; };
-		E25DC3AC261C5740008112D9 /* Weapons.json in Resources */ = {isa = PBXBuildFile; fileRef = E25DC3AB261C5740008112D9 /* Weapons.json */; };
 		E267C93A262DA48700520438 /* SingleCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E267C939262DA48700520438 /* SingleCharacterView.swift */; };
 		E276405E26399BC500F80D29 /* CharacterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E276405D26399BC500F80D29 /* CharacterList.swift */; };
 		E27640632639A42500F80D29 /* CharacterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27640622639A42500F80D29 /* CharacterListView.swift */; };
@@ -61,14 +59,12 @@
 		E234FB4D263EFF3800A1BAB5 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		E240C36B2624861000125A96 /* ArmourDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmourDetailView.swift; sourceTree = "<group>"; };
 		E240C370262494FA00125A96 /* ArmourList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmourList.swift; sourceTree = "<group>"; };
-		E240C3752625B99A00125A96 /* CharacterEncoded.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = CharacterEncoded.json; path = "../../../../../../../Dropbox/Uni/Year 3/Mobile Apps/CharacterEncoded.json"; sourceTree = "<group>"; };
 		E240C37A2625BD6C00125A96 /* CharacterCreationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreationView.swift; sourceTree = "<group>"; };
 		E240C37F2625F92A00125A96 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
 		E24B1259263C4D7A002FF0C5 /* BrowseWeaponsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseWeaponsView.swift; sourceTree = "<group>"; };
 		E24B125B263C4D98002FF0C5 /* BrowseArmourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseArmourView.swift; sourceTree = "<group>"; };
 		E24B125D263C4DD4002FF0C5 /* CharacterMasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterMasterView.swift; sourceTree = "<group>"; };
 		E25DC3A5261B77D7008112D9 /* Skill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skill.swift; sourceTree = "<group>"; };
-		E25DC3AB261C5740008112D9 /* Weapons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Weapons.json; path = "../../../../../../../Dropbox/Uni/Year 3/Mobile Apps/Weapons.json"; sourceTree = "<group>"; };
 		E267C939262DA48700520438 /* SingleCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterView.swift; sourceTree = "<group>"; };
 		E276405D26399BC500F80D29 /* CharacterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterList.swift; sourceTree = "<group>"; };
 		E27640622639A42500F80D29 /* CharacterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListView.swift; sourceTree = "<group>"; };
@@ -125,8 +121,6 @@
 		E25DC3AA261C571D008112D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E240C3752625B99A00125A96 /* CharacterEncoded.json */,
-				E25DC3AB261C5740008112D9 /* Weapons.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -332,9 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E240C3762625B99A00125A96 /* CharacterEncoded.json in Resources */,
 				E295A15A261B30C000FA2C07 /* Preview Assets.xcassets in Resources */,
-				E25DC3AC261C5740008112D9 /* Weapons.json in Resources */,
 				E295A157261B30C000FA2C07 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

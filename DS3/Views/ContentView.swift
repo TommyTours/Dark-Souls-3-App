@@ -46,24 +46,6 @@ struct ContentView: View {
             
         }
     }
-    //            .onAppear {
-    //                //character.encode()
-    //            }
-    //            .onAppear {
-    //                let decoder = JSONDecoder()
-    //
-    //                do {
-//                        let subDir = Bundle.main.resourceURL!.appendingPathComponent("Resources").path
-//                        let subDirURL = URL(fileURLWithPath: subDir)
-//                        let JSONURL = URL(fileURLWithPath: "CharacterEncoded",
-//                                        relativeTo: subDirURL).appendingPathExtension("json")
-//                        let characterData = try Data(contentsOf: JSONURL)
-//                        let characterDecoded = try decoder.decode(Character.self, from: characterData)
-//                        print(characterDecoded)
-//                    } catch let error {
-//                        print(error)
-//                    }
-    //            }
 }
 
 struct ContentView_Previews: PreviewProvider {

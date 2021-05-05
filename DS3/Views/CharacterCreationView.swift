@@ -76,8 +76,6 @@ struct CharacterCreationView: View
                         var newCharacter = Character(name: charName, charClass: selectedClass, rh1: noneWeapon, rh2: noneWeapon, rh3: noneWeapon, lh1: noneWeapon, lh2: noneWeapon, lh3: noneWeapon, head: noneHelmet, arms: noneArms, body: noneBody, legs: noneLegs)
                             print(newCharacter)
                     characterList.addCharacter(newCharacter: newCharacter)
-                    //isShowingNewCharacter = false
-                    //SingleCharacterView(initCharacter: newCharacter)
                     
                 }, label: { Text("Create Character")
                         })
@@ -219,11 +217,9 @@ struct StepperView: View {
 struct CharacterCreationView_Previews: PreviewProvider {
     static var previews: some View {
         //var testChar = Character(name: "", charClass: Character.CharacterClass.Deprived, rh1: nil, rh2: nil, rh3: nil, lh1: nil, lh2: nil, lh3: nil, head: nil, arms: nil, body: nil, legs: nil)
-        CharacterCreationView(characterList: .constant(CharacterList.init()))//, isShowingNewCharacter: .constant(false))
-        CharacterCreationView(characterList: .constant(CharacterList.init()))//, isShowingNewCharacter: .constant(false))
+        CharacterCreationView(characterList: .constant(CharacterList.init()))
+        CharacterCreationView(characterList: .constant(CharacterList.init()))
             .preferredColorScheme(.dark)
-        //StatCounter(value: .constant(1), statPoints: .constant(0))
-        //StepperView(value: .constant(1), level: .constant(1), label: "Poop")
     }
 }
 

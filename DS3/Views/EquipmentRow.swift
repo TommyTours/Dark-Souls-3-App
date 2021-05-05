@@ -107,9 +107,6 @@ struct WeaponRows: View
         NavigationView {
             List(){
                 ForEach(weaponList.allWeapons, id: \.Name) { weapon in
-                    //                    EquipmentRow(
-                    //                        equipment: weapon
-                    //                    )
                     if weapon.Name.uppercased() != "NONE"
                     {
                         WeaponNameTypeRow(weapon: weapon)
@@ -129,14 +126,10 @@ struct WeaponRows: View
             
             
             Group {
-                ArmourRowsTextOnly()//selectedWeapon: .constant(allWeapons[1]))
-                ArmourRowsTextOnly()//selectedWeapon: .constant(allWeapons[1]))
+                ArmourRowsTextOnly()
+                ArmourRowsTextOnly()
                     .previewDevice("iPhone SE (2nd generation)")
             }
-            //WeaponRows()
-            //.preferredColorScheme(.dark)
-            //WeaponRowsTextOnly(selectedWeapon: .constant(nil))
-            //WeaponPickerList(label: "Test Label", weapon: .constant(noneWeapon))
         }
     }
 }

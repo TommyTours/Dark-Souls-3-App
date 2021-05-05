@@ -146,30 +146,6 @@ struct WeaponRow: View
     }
 }
 
-//struct NumberStepper: View
-//{
-//    var value: Int
-//
-//    var body: some View
-//    {
-//        HStack
-//        {
-//            //Button(action: { value += 1 } )
-//            {
-//            Image(systemName: "arrowtriangle.left")
-//                .resizable()
-//                //.foregroundColor(.black)
-//                .frame(width: 40, height: 40)
-//            }
-//            Text(String(value))
-//                .font(.largeTitle)
-//            Image(systemName: "arrowtriangle.right")
-//                .resizable()
-//                .frame(width: 40, height: 40)
-//        }
-//    }
-//}
-
 struct CharacterDetailView_Previews: PreviewProvider
 {
     static var previews: some View
@@ -188,9 +164,5 @@ struct CharacterDetailView_Previews: PreviewProvider
         var testChar = Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: noneWeapon, rh3: noneWeapon, lh1: shield, lh2: noneWeapon, lh3: noneWeapon, head: helm, arms: arms, body: body, legs: legs)
         CharacterWeaponRows(character: .constant(Character(name: "Dave", charClass: Character.CharacterClass.Deprived, rh1: sword, rh2: noneWeapon, rh3: noneWeapon, lh1: shield, lh2: noneWeapon, lh3: noneWeapon, head: helm, arms: arms, body: body, legs: legs)
 ))
-        
-        //CharacterDetailView(character: testChar)
-        //CharacterAttributesView(character: testChar)
-        //NumberStepper(value: testChar.Strength)
     }
 }

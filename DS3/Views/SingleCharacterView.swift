@@ -159,16 +159,6 @@ struct CharacterClassLevelView: View
 {
     @Binding var character: Character
     @Binding var level: Int
-//    @Binding var rh1: Weapon
-//    @Binding var rh2: Weapon
-//    @Binding var rh3: Weapon
-//    @Binding var lh1: Weapon
-//    @Binding var lh2: Weapon
-//    @Binding var lh3: Weapon
-//    @Binding var Head: Armour
-//    @Binding var Torso: Armour
-//    @Binding var Arms: Armour
-//    @Binding var Legs: Armour
     @Binding var EquipLimit: Double
     @Binding var RequiredWeight: Double
     @Binding var Percentage: Double
@@ -253,8 +243,6 @@ struct SingleCharacterView_Previews: PreviewProvider {
     var myWeaponlist = WeaponList.init().allWeapons
     
     static var previews: some View {
-        //SingleCharacterView(name: "Dave")
-        //WeaponPickerList(label: "Test EWapons picker", weapon: .constant(Weapon(name: "None", description: "None", location: "None", weight: 0.0, durability: 0, imageKey: "wpn_none", physAtk: 0, magAtk: 0, fireAtk: 0, lightningAtk: 0, darkAtk: 0, critical: 0, physDef: 0, magDef: 0, fireDef: 0, lightningDef: 0, darkDef: 0, stability: 0, bleed: 0, poison: 0, frost: 0, dmgType: [], ability: Skill(name: "Parry", description: "Parrys the foes attack"), fpCost: 0, strReq: 0, strScale: Weapon.Scaling.None.rawValue, dexReq: 0, dexScale: Weapon.Scaling.None.rawValue, intReq: 0, intScale: Weapon.Scaling.None.rawValue, fthReq: 0, fthScale: Weapon.Scaling.None.rawValue, weaponType: "None")))
         SingleCharacterView(initCharacter: CharacterList.init().allCharacters.first!)
     }
 }

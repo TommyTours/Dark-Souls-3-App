@@ -10,10 +10,6 @@ import SwiftUI
 struct RequirementsView: View {
     var localCharacter: Character
     var requiredAttributes: Attributes
-    //    let requiredStr: Int
-    //    let requiredDex: Int
-    //    let requiredInt: Int
-    //    let requiredFth: Int
     let maxEquip: Float
     let equipLoad: Float
     let requiredLevels: Int
@@ -72,8 +68,6 @@ struct RequirementsView: View {
                             Text("\(requiredAttributes.Dexterity)")
                             Text("\(requiredAttributes.Intelligence)")
                             Text("\(requiredAttributes.Faith)")
-                            //Text("\(localCharacter.Attributes.Vitality + Int((equipLoad.rounded(.up) - maxEquip)))")
-                            //Text(numFormatter.string(for: equipLoad)!)
                         }
                         VStack
                         {
@@ -86,10 +80,6 @@ struct RequirementsView: View {
                                 .foregroundColor(localCharacter.Attributes.Intelligence >= requiredAttributes.Intelligence ? .green : .red)
                             Text("\(localCharacter.Attributes.Faith)")
                                 .foregroundColor(localCharacter.Attributes.Faith >= requiredAttributes.Faith ? .green : .red)
-                            //Text(numFormatter.string(for: maxEquip)!)
-                              //  .foregroundColor(maxEquip >= equipLoad ? .green : .red)
-                            //Text(localCharater.Attributes.Vitality)
-                              //  .foregroundColor(maxEquip >= equipLoad ? .green : .red)
                         }
                     }.padding()
                 }

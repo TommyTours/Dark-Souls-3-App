@@ -38,26 +38,3 @@ struct ArmourList
     ]
     
 }
-/// An in memory cache of Armours  that are persistently stored
-//    @Published private var ArmoursCache: [Armour] =
-//    (
-//        try? JSONDecoder().decode(
-//            [Armour].self, from: .init(contentsOf: .jsonURL)
-//        )
-//    ).filter { _ in !PreviewDevice.inXcode }
-//    ??
-//    [
-//    ]
-//}
-//
-//private extension URL
-//{
-//    static let jsonURL = Self(fileName: "Armours", extension: "json")
-//
-//    init(fileName: String, extension: String)
-//    {
-//        self = FileManager.`default`.urls(for: .documentDirectory, in: .userDomainMask)[0]
-//            .appendingPathComponent(fileName)
-//            .appendingPathExtension(`extension`)
-//    }
-//}

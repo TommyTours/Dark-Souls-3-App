@@ -287,29 +287,6 @@ struct AttributeViewGrid: View
             }.font(.body)
         }
     }
-    
-    
-    //
-    //    func createGridItems() -> [Text]
-    //    {
-    //        let returnArr = [Text(""),
-    //                         Text("Str"),
-    //                         Text("Dex"),
-    //                         Text("Int"),
-    //                         Text("Fth"),
-    //                         Text("Required"),
-    //                         Text(String(weapon.StrReq)),
-    //                         Text(String(weapon.DexReq)),
-    //                         Text(String(weapon.IntReq)),
-    //                         Text(String(weapon.FthReq)),
-    //                         Text("Bonus"),
-    //                         Text(weapon.StrScale),
-    //                         Text(weapon.DexScale),
-    //                         Text(weapon.IntScale),
-    //                         Text(weapon.FthScale)]
-    //
-    //        return returnArr
-    //    }
 }
 
 struct GridHeadText: View

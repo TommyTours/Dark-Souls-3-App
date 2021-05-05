@@ -17,10 +17,8 @@ struct CharacterListView: View {
             List {
                 Section
                 {
-                    //NavigationLink(destination: CharacterCreationView(characterList: $characterListInstance, isShowingNewCharacter: $isShowingNewCharacter), isActive: $isShowingNewCharacter) {
                     Text("Add New Character")
                         .font(.title2)
-                    // }
                 }
                 Section(header: Text("My Characters"))
                 {
